@@ -1,4 +1,4 @@
-# ------------------------------- Ciklas While and for ----------------------------------
+print('------------------------------- Ciklas While and for ----------------------------------')
 # import time
 # i = 10
 
@@ -20,5 +20,52 @@
     #     continue
     # print(i)
 
-# -------------------------------------  Uzdaviniai: 24/03/27
+print('--------------------------------Uzdaviniai: 24/03/27 -------------------------------------')
+#-----------------------------------------------1.----------------------------------------------
+# Sukurkite kintamuosius, kuriuose reprezentuotų vartotojo vardą ir slaptažodį. Pradėkite begalinį ciklą,
+# leidžiantį įvesti vartotojo vardą ir slaptažodį. Jei duomenys teisingi, sustabdykite begalinį ciklą ir
+# išspausdinkite pasisveikinimo pranešimą.
+
+# people = ('monika', 'jonas', 'antanas')
+# passwords = ('14658', '52869', '23458')
+# correct_name, correct_last_name = 'mindaugas', 'vindasius'
+# while True:
+#     input_name = input("Enter your name: ")
+#     input_last_name = input("Enter your last name: ")
+#     if (input_name, input_last_name) == (correct_name, correct_last_name):
+#         print(f'hello {correct_name}, {correct_last_name}!')
+#         break
+#     print('prasau ivesti dar karta')
+
+# ---------------------------------------------2.--------------------------------------------------
+# Leiskite naudotojui įvesti 10 sveikųjų skaičių, tada spausdinkite šių įvestų skaičių sumą ir vidurkį.
+
+# result = []
+# for i in range(10):
+#     number = int(input('ivesti skaiciu'))
+#     result.append(number)
+# print(sum(result) / len(result))
+
+# ---------------------------------------------3.--------------------------------------------------
+# Sugeneruokite dict iš 10 skaitmenų (keys): 1,2,3...10. Kiekvienam key turėtų būti priskirta atsitiktinio
+# sveikojo skaičiaus vertė nuo 1 iki 100.
+
+# import random
+#
+# result = {}
+# for i in range(1, 11):
+#     result[i] = random.randint(1, 100)
+# print(result)
+
+# ---------------------------------------------4.----------------------------------------------------
+# Sukurkite PIN kodo nulaužimo programą. Tarkime, PIN kodą sudaro 4 atsitiktiniai skaitmenys.
+# Reikšmę galite saugoti kintamajame. Tada sukurkite ciklą, einantį per visas galimas kombinacijas,
+# kol rasite tą, kurią įvedėte.
+
+
+
+
+# ---------------------------------------------5.-----------------------------------------------------
+# Sukurkite programą, kuri leistų naudotojui įvesti skaičių seriją ir apskaičiuotų visų skaičių vidurkį.
+# Programa taip pat turėtų išspausdinti visų skaičių list'a ir vidurkį.
 
