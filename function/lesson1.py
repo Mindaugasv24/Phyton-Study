@@ -120,16 +120,41 @@ print('---------------------------------Uzdaviniai: Functions-------------------
 
 # -----------------------------------------4.------------------------------
 # Sukurkite funkciją, kuri grąžintų tik unikalius simbolius turinčias string reikšmes.
+# def unique_simbol(string):
+#     unique_value = []
+#     for simbol in string:
+#         if simbol not in unique_value:
+#             unique_value.append(simbol)
+#     return ''.join(unique_value)
+# text = 'Sukurkite funkciją, kuri grąžintų tik unikalius simbolius turinčias string reikšmes'
+# print(unique_simbol(text))
 
-def unique_simbol(string):
-    unique_value = []
-    for simbol in string:
-        if simbol not in unique_value:
-            unique_value.append(simbol)
-    return ''.join(unique_value)
+# ------------------------------------Destytojo sprendimas:-----------------------------------
+# def return_uniqe(row):
+#     return set(simbols)
+#
+# simbols = 'ujfnafaf 548 49 94fa mofmafmpa mmf  m op,fa'
+# print(return_uniqe(simbols))
 
-text = 'Sukurkite funkciją, kuri grąžintų tik unikalius simbolius turinčias string reikšmes'
-print(unique_simbol(text))
+# --------------------------------------PVZ:  ------------------------------------------------
+# def return_words_uniqe_symbols(text):
+#     words = text.split()
+#
+#     result_words_uniqe_symbols = []
+#     for word in words:
+#         if len(word) == len(set(word)):
+#             result_words_uniqe_symbols.append(word)
+#
+#     print(text)
+#     return list(set(result_words_uniqe_symbols))
+#
+# text = """
+# Niujorkas (oficialiai – Niujorko miestas, angl. New York City – Naujojo Jorko miestas) – didžiausias JAV miestas, antrasis pagal dydį Šiaurės Amerikos miestas po Meksiko.
+# Vienas iš pagrindinių pasaulio finansų ir komunikacijų centrų. Niujorke gyvena 8,34 mln. gyventojų (2022 m.), o su priemiesčiais – daugiau kaip 23,5 milijonai (2020 m.), ir tai vienas iš didžiausių pasaulio miestų. Reikšmingas tarptautinės diplomatijos centras, kartais laikomas įtakingiausiu pasaulio miestu,[1] čia įsikūrusi Jungtinių Tautų Organizacijos būstinė.[2][3] Šnekamojoje kalboje dar vadinamas Didžiuoju Obuoliu (angl. The Big Apple),[4][5] ir miestu, kuris niekada nemiega (angl. The City That Never Sleeps).[6]
+# """
+#
+# print(return_words_uniqe_symbols(text=text))
+
 
 
 # -----------------------------------------5.------------------------------
