@@ -4,11 +4,12 @@ print('---------------------------------Uzdaviniai: functions repeating---------
 """
 Pakartokite Funkcijos ir Funkcijos (2 dalis), kad užbaigtumėte šias užduotis.
 """
+
 # ---------------------------------------------------------------------------------------
 """
 1. Sukurkite bent 5 skirtingas funkcijas ir pabandykite apdoroti bent 5 integruotas "Python" išimtis.
 """
-
+print('Uzduotis 1')
 # ---------------------------------------------------------------------------------------
 """
 2.Python kalboje, dalijant iš nulio, gauname ZeroDivisionError. Jūsų užduotis - sukurti funkciją, kuri:
@@ -21,14 +22,17 @@ Pakartokite Funkcijos ir Funkcijos (2 dalis), kad užbaigtumėte šias užduotis
     pasirinktinį klaidos pranešimą.
 """
 
+print('Uzduotis 2')
 # ---------------------------------------------------------------------------------------
 """
 3.Sukurkite mini "Python" programą, kuri įvestų du skaičius ir grąžintų jų sumą, atimtį, dalybą, daugybą. 
 Tvarkykite visas galimas klaidas.
 """
 
-
+print('Uzduotis 3')
 # ---------------------------------------------------------------------------------------
 """
 4.Atnaujinkite ankstesnę užduotį su galimomis raise išimtimis.
 """
+
+print('Uzduotis 4')
