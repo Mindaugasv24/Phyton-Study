@@ -1,4 +1,10 @@
 print('--------------Tema12: TRY Except(Klaidų tvarkymas, išimtys) 24/04/04-------------------------')
+# def divide_two_numbers(dividend: int, divisor: int) -> None:
+#     try:
+#         quotient = dividend / divisor
+#         print(f'Result = {quotient}')
+#     except ZeroDivisionError:
+#             print('Divisor is zero; Division is impossible')
 
 print('---------------------------------Uzdaviniai: functions repeating--------------------------------')
 """
