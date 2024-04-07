@@ -21,18 +21,74 @@ print('Uzduotis 1')
     Jei įvesties duomenys nėra skaičiai, pateikiamas TypeError pranešimas. Funkcija pagauna šią TypeError ir grąžina 
     pasirinktinį klaidos pranešimą.
 """
-
+# def safe_division(num1, num2):
+#     try:
+#         result = num1 / num2
+#         print("Attempted division")
+#         return result
+#     except ZeroDivisionError:
+#         print("Division by zero is not allowed")
+#         return None
+#     except TypeError:
+#         print("Input values must be numeric")
+#         return None
+#
+# # Test cases
+# print(safe_division(10, 2))  # Output: Attempted division \n 5.0
+# print(safe_division(10, 0))  # Output: Division by zero is not allowed \n None
+# print(safe_division("10", 2))  # Output: Input values must be numeric \n None
 print('Uzduotis 2')
 # ---------------------------------------------------------------------------------------
 """
 3.Sukurkite mini "Python" programą, kuri įvestų du skaičius ir grąžintų jų sumą, atimtį, dalybą, daugybą. 
 Tvarkykite visas galimas klaidas.
 """
+# def skaiciuoti(skaicius1, skaicius2):
+#     try:
+#         suma = skaicius1 + skaicius2
+#         skirtumas = skaicius1 - skaicius2
+#         dalyba = skaicius1 / skaicius2
+#         sandauga = skaicius1 * skaicius2
+#         return f"Suma: {suma}, Skirtumas: {skirtumas}, Dalyba: {dalyba}, Sandauga: {sandauga}"
+#     except ZeroDivisionError:
+#         return "Dalyba iš nulio negalima!"
+#     except ValueError:
+#         return "Įvesti duomenys turi būti skaičiai!"
+#
+# try:
+#     skaicius1 = float(input("Įveskite pirmą skaičių: "))
+#     skaicius2 = float(input("Įveskite antrą skaičių: "))
+#     print(skaiciuoti(skaicius1, skaicius2))
+# except ValueError:
+#     print("Neteisinga įvestis. Įveskite skaičius.")
 
 print('Uzduotis 3')
 # ---------------------------------------------------------------------------------------
 """
 4.Atnaujinkite ankstesnę užduotį su galimomis raise išimtimis.
 """
-
-print('Uzduotis 4')
+# def skaiciu_skaiciavimas(skaicius1, skaicius2):
+#     if skaicius2 == 0:
+#         raise ZeroDivisionError("Dalyba iš nulio negalima!")
+#     suma = skaicius1 + skaicius2
+#     skirtumas = skaicius1 - skaicius2
+#     dalyba = skaicius1 / skaicius2
+#     sandauga = skaicius1 * skaicius2
+#     return suma, skirtumas, dalyba, sandauga
+#
+# while True:
+#     try:
+#         sk1 = float(input("Įveskite pirmą skaičių: "))
+#         sk2 = float(input("Įveskite antrą skaičių: "))
+#         rezultatai = skaiciu_skaiciavimas(sk1, sk2)
+#         print(f"Suma: {rezultatai[0]}")
+#         print(f"Skirtumas: {rezultatai[1]}")
+#         print(f"Dalyba: {rezultatai[2]}")
+#         print(f"Sandauga: {rezultatai[3]}")
+#         break
+#     except ValueError:
+#         print("Įvestas neteisingas skaičius, bandykite dar kartą!")
+#     except ZeroDivisionError as error:
+#         print(error)
+#         break
+# print('Uzduotis 4')
