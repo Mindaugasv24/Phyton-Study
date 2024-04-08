@@ -15,6 +15,7 @@ Pakartokite Funkcijos ir Funkcijos (2 dalis), kad užbaigtumėte šias užduotis
 """
 1. Sukurkite bent 5 skirtingas funkcijas ir pabandykite apdoroti bent 5 integruotas "Python" išimtis.
 """
+
 print('Uzduotis 1')
 # ---------------------------------------------------------------------------------------
 """
