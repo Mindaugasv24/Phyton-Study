@@ -53,6 +53,11 @@ Registruokite įvestis ir rezultatus į failą.
 # lst = [1, 'a', 2, 'b', 3, 'c']
 # element_type = str
 # print(move_elements_to_end(lst, element_type))
+
+#  -------------------------------------Destytojo sprendimas:-----------------------------
+# def move_to_end(numbers: list, number: int):
+#     quantity = numbers.count(number)
+#     return [n for n in numbers if n != number] + [number for _ in range(quantity)]
 """
 3. Sukurkite 3 funkcijas, kurios yra susijusios viena su kita (viena iškviečiama kitoje), 
 ir išbandykite visus logging sunkumo lygius pagal savo projektą.
