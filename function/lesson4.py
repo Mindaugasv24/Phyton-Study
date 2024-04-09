@@ -1,4 +1,4 @@
-import os
+# import os
 
 print('-----------------Tema: Moduliai, bibliotekos ir jų importavimas---------------------------')
 
@@ -31,8 +31,7 @@ Pvz jei nuo 3 iki 5, spausdina:
 4444 
 55555 
 """
-
-#------------------------------------------------Nepabaigtas!!!-----------------------------------
+# ------------------------------------------------Nepabaigtas!!!-----------------------------------
 
 # def print_numbers_range(start, end):
 #     for i in range(start, end + 1):
@@ -126,9 +125,125 @@ skaityti arba rašyti į failų sistemą. Jūsų užduotis yra:
 # os.path.join(...)
 # os.remove(...)
 
-def name_all_files():
-    return os.listdir()
-
-print(name_all_files())
+# def name_all_files():
+#     return os.listdir()
+#
+# print(name_all_files())
 
 # -------------------------4.3---------------------
+
+print('-----------------------------------Destytojo Uzdaviniai: 24/04/09 --------------------------------')
+"""
+1. Sukurti funkcija, kuri priimtu tris variable – dicta, reikalingus key (list), istrinamus key (listas). 
+Funkcija turi grazinti du variable – dicta su istrintais key ir dicta,turinti tik reikalingus key. 
+"""
+# def istrinti_ir_gauti_dictus(sarasas, istrinami_key):
+#     svarb_keys = {key: sarasas.get(key) for key in istrinami_key}
+#     istrinami_dict = sarasas.copy()
+#     for key in istrinami_key:
+#         istrinami_dict.pop(key, None)
+#     return istrinami_dict, svarb_keys
+#
+# sarasas = {
+#     'vardas': 'Jonas',
+#     'pavarde': 'Jonaitis',
+#     'amzius': 30,
+#     'miestas': 'Vilnius'
+# }
+#
+# reikalingi_keys = ['vardas', 'amzius']
+# istrinami_keys = ['pavarde', 'miestas']
+#
+# istrinami_dict, svarb_keys = istrinti_ir_gauti_dictus(sarasas, istrinami_keys)
+#
+# print("Istrinami keys dictas:")
+# print(istrinami_dict)
+#
+# print("\nReikalingi keys dictas:")
+# print(svarb_keys)
+"""
+--------------------------------------------Destytojo sprendimas--------------------------------------
+"""
+# import copy
+# def calculate_dict(data: dict, nesessary_key: list, deleting_keys)-> tuple:
+#     """
+#     Sukurti funkcija, kuri priimtu tris variable – dicta, reikalingus key (list), istrinamus key (listas).
+#     :return:
+#     """
+#     result_n = {}
+#     new_data = copy.deepcopy(data)
+#     for key in data:
+#         if key in nesessary_key:
+#             result_n[key] = data[key]
+#         if key in deleting_keys:
+#             del new_data[key]
+#     return result_n
+#
+# numbers = {
+#     1:"vienas",
+#     2:"du",
+#     3:"trys",
+#     4."keturi",
+# }
+#
+# needed_keys = [1, 2]
+# deleted_keys = [3]
+# calculate_dict(data=numbers, nesessary_key=needed_keys, deleted_keys=deleted_keys)
+# ----------------------------------------------------------------------------------------------------------
+# def calculate_dict(data: dict, necessary_key: list, deleting_key):
+#     """
+#     Sukurti funkcija, kuri priimtu tris variable – dicta, reikalingus key (list), istrinamus key (listas)
+#     :return:
+#     """
+#     result_n = {}
+#     new_data = data.copy()
+#     for key in data:
+#         if key in necessary_key:
+#             result_n[key] = data[key]
+#         if key in deleted_keys:
+#             del new_data[key]
+#
+#     return result_n, new_data
+#
+# numbers = {
+#     1: 'vienas',
+#     2: 'du',
+#     3: 'trys',
+#     4: 'keturi',
+# }
+# needed_keys = [1, 2]
+# deleted_keys = [3]
+"""
+2. Parasyti funckija, kuri priimtu du vairabe – lista kartotini. Grazinti turi lista, 
+kuriame buvo listai su kartotiniu nariu skaiciumis. Pvz:
+Data = [1, 2, 3, 4, 5, 5, 7, 8, 9] 
+Kartotinis = 3 
+Grazina [[1, 2, 3], [4, 5, 6], [7, 8, 9]] 
+"""
+# def number_list(list):
+#     number_key = []
+#     for i in list:
+#         num_n = [num for num in i if num % 2 == 0]
+#         if len(num_n) > 1:
+#             return number_key
+#
+# print(number_list([[1, 2, 3, 4], [5, 6, 7], [8, 9, 10], [11, 12, 13, 14]]))
+"""
+---------------------------------------------Destytojo sprendimas-------------------------------------
+"""
+# import math
+# def return_sliced_list(numbers: list, number: int):
+#     value = math.ceil(len(numbers)//number)
+#     return [numbers[i*number: i*number+number] for i in range(value)]
+    # result = []
+    # for i in range(len(numbers)//number):
+    # for i in range(value):
+    #     first_index, second_index = i*number, i*number+number
+    #     result.append(numbers[first_index:second_index])
+    # return result
+        # print(i, i*number, i*number+number)
+        # print(numbers[first_index:second_index])
+
+# data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# kartotinis = 3
+# print(return_sliced_list(numbers=data, number=kartotinis))

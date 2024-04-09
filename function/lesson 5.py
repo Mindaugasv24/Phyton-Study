@@ -1,0 +1,1 @@
+print('---------------------Tema: logging( registravimas)--------------------')
