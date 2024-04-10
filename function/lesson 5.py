@@ -54,7 +54,7 @@ Registruokite įvestis ir rezultatus į failą.
 # element_type = str
 # print(move_elements_to_end(lst, element_type))
 
-#  -------------------------------------Destytojo sprendimas:-----------------------------
+#  -------------------------------------Destytojo sprendimas: (Pasiziureti iki galo)-----------------------------
 # def move_to_end(numbers: list, number: int):
 #     quantity = numbers.count(number)
 #     return [n for n in numbers if n != number] + [number for _ in range(quantity)]
