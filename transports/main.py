@@ -1,12 +1,20 @@
-from transports.transport.Transport import main
+from datetime import datetime
 
-bus1 = Busvehicles(50, 100000, "ABC123", "diesel", 1000, "2022-01-15", "B category", 20, "2022-05-20")
-bus1.technical_notice()
-bus1.insurance_notice()
-print(bus1.costs(500))
-print(bus1.transport(200, 500))
+from transports.car import Car
+
+car = Car(
+    km_per_year=20000,
+    car_registration_number="ANB205",
+    fuel_type="Petrol",
+    fixed_costs=4000,
+    technical_inspections_date=datetime(year=2024, month=5, day=15),
+    license_categories="B",
+    fuel_consumption_100_km=8,
+    insurance_date=datetime(year=2024, month=5, day=15),
+)
 
 
-car = EasyCar(10000, "ABC123", "Petrol", 500, ["2022-03-15", "2022-09-15"], ["B"], 6.5, "2023-01-01")
-car.check_insurance_and_tech_inspection("2022-11")
-car.calculate_costs_for_distance(200)
+print(car.check_if_next_month_needs_insurance())
+print(car.check_if_next_month_needs_technical())
+# car.run()
+# car.check()
