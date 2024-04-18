@@ -18,3 +18,11 @@ class Bus(Auto):
 
     def total_cost_for_transporting_passengers(self, number_of_passengers, distance, fuel_price_per_litre):
         return self.calculate_costs_for_distance(distance, fuel_price_per_litre) * self.number_of_buses_to_transport_passengers(number_of_passengers)
+
+    def total_cost_for_transporting_passengers(self, number_of_passengers,distance):
+        fuel_cost = self.fuel_consumption_100_km * distance / 100 * self.fuel_type.price_per_liter
+        maintenance_cost = self.fixed_costs.maintenance_cost_per_year / self.km_per_year * distance
+        insurance_cost = self.fixed_costs.insurance_cost_per_year / self.km_per_year * distance
+        total_cost = fuel_cost + maintenance_cost + insurance_cost
+        cost_per_passenger = total_cost / number_of_passengers
+        return cost_per_passenger
