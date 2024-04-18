@@ -34,3 +34,9 @@ class Auto:
         if self.__check_next_month(self.insurance_date):
             return True
         return False
+
+    def calculate_costs_for_distance(self, distance: int, fuel_price_per_litre: float):
+        fixed_costs = (distance / self.km_per_year) * self.fixed_costs
+        variable_costs = (distance / 100) * self.fuel_consumption_100_km * fuel_price_per_litre
+        total_costs = variable_costs + fixed_costs
+        return total_costs
