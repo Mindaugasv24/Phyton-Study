@@ -2,12 +2,15 @@ from datetime import datetime, timedelta
 
 import time
 
-print('-----------------------------OOP sprendimai-----------------------------------------')
+print(
+    "-----------------------------OOP sprendimai-----------------------------------------"
+)
 
-print('-----------------------------Destytojo uzdavinys:------------------------------------')
+print(
+    "-----------------------------Destytojo uzdavinys:------------------------------------"
+)
 
-""" 
-Kaip zinote, while ciklas dazniausiai naudojamas su laiku. 
+"""Kaip zinote, while ciklas dazniausiai naudojamas su laiku. 
 Ir siuo metu projekte naudojame toki koda:
     import time
     from datetime import datetime, timedelta
@@ -22,8 +25,7 @@ Todel galima parasyti klase ir ja naudoti taip:
     while timer.fired(5):
         print('vienas')
         time.sleep(1)
-Paraškite metodą, kuris leistų naudoti klase auksciau aprasytu budu. 
-"""
+Paraškite metodą, kuris leistų naudoti klase auksciau aprasytu budu."""
 # def print_one_for_five_seconds():
 #     current_time = datetime.now()
 #     while current_time + timedelta(seconds=5) >= datetime.now():
@@ -32,16 +34,19 @@ Paraškite metodą, kuris leistų naudoti klase auksciau aprasytu budu.
 #
 # print(print_one_for_five_seconds())
 
+
 class Timer:
+    """representing time"""
     def __init__(self):
         self.start_time = datetime.now()
 
     def fired(self, seconds):
-        return self.start_time + timedelta(seconds=seconds) >= datetime.now()
+        """representing time changes"""
+        return datetime.now() >= self.start_time + timedelta(seconds=seconds)
 
-    while timer.fired(5):
-        print('vienas')
-        time.sleep(1)
 
 timer = Timer()
-print(timer.fired(5))
+while timer.fired(5):
+    print("vienas")
+    time.sleep(1)
+# print(timer.fired(5))
