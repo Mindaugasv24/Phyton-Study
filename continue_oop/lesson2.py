@@ -1,5 +1,5 @@
 print('------------------Reapeating functions: 24/04/23--------------')
-
+# -----scrennshote yra Funkciju pakartojimai(2 foto)
 """Funkcija, kurioje vairable yra args ir kwargs.
 Args – intergeris
 Kwargs - string
