@@ -26,8 +26,8 @@ Output:True or False"""
 # character = "P"
 # print(do_something(string, character))
 
-"""2.Write a Python program to create a lambda function that adds 15 to a given number passed in as an argument, also create a lambda function that multiplies argument x with argument y and print the result.
-"""
+"""2.Write a Python program to create a lambda function that adds 15 to a given number passed in as an argument,
+also create a lambda function that multiplies argument x with argument y and print the result."""
 
 # add_fifteen = lambda x: x + 15
 # num = 10
@@ -49,7 +49,7 @@ Output:True or False"""
 #     square = list(map(lambda x: x**2, nums))
 #     cube = list(map(lambda x: x**3, nums))
 #     return square, cube
-
+#
 # nums = [1, 2, 3, 4, 5]
 # square, cube = square_and_cube(nums)
 # print("Original List:", nums)
@@ -82,12 +82,14 @@ Output:True or False"""
 # print(sorted_list)
 
 """6.Write a Python program to sort a list of dictionaries buy color value using Lambda"""
-# data = [{'make': 'Nokia', 'model': 216, 'color': 'Black'}, {'make': 'Mi Max', 'model': '2', 'color': 'Gold'}, {'make': 'Samsung', 'model': 7, 'color': 'Blue'}]
+# data = [{'make': 'Nokia', 'model': 216, 'color': 'Black'},
+# {'make': 'Mi Max', 'model': '2', 'color': 'Gold'}, {'make': 'Samsung', 'model': 7, 'color': 'Blue'}]
 # sorted_data = sorted(data, key=lambda x: x['color'])
 
 # print(sorted_data)
 
-"""7.Write a Python program to sort a given matrix in ascending order according to the sum of its rows using lambda"""
+"""7.Write a Python program to sort a given matrix in ascending order
+according to the sum of its rows using lambda"""
 # matrix1 = [[1, 2, 3], [2, 4, 5], [1, 1, 1]]
 # matrix2 = [[1, 2, 3], [-2, 4, -5], [1, -1, 1]]
 
