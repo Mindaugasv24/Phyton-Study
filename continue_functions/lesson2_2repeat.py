@@ -49,7 +49,7 @@ also create a lambda function that multiplies argument x with argument y and pri
 #     square = list(map(lambda x: x**2, nums))
 #     cube = list(map(lambda x: x**3, nums))
 #     return square, cube
-#
+
 # nums = [1, 2, 3, 4, 5]
 # square, cube = square_and_cube(nums)
 # print("Original List:", nums)
