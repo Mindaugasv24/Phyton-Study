@@ -170,4 +170,4 @@ def concatenate_strings(lst):
 
 strings = ["Hello", '', "world", "!"]
 
-print(concatenate_strings(strings))
+# print(concatenate_strings(strings))
