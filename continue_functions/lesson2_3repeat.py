@@ -5,10 +5,15 @@ print("--------------Functions Exsersize 2:24/04/23----------------------")
 """1.Write a Python program to triple all numbers of a given list of integers.
 Use Python map()"""
 
-nums = [1, 2, 3, 4, 5]
-tripled_nums = list(map(lambda x: x * 3, nums))
 
-# print(tripled_nums)
+def check_triple_numbers(num_list):
+    return list(map(lambda x: x*3, num_list))
+
+
+numbers = [5, 4, 8, 3, 6]
+tripled_numbers = check_triple_numbers(numbers)
+
+# print(tripled_numbers)
 
 """2.Write a Python program to square the elements of a list using map() function."""
 
@@ -24,10 +29,18 @@ squared_numbers = list(map(square, numbers))
 # print(squared_numbers)
 
 """3.Write a Python program to add three given lists using Python map and lambda"""
-list1 = [4, 8, 1]
-list2 = [2, 9, 5]
-list3 = [6, 2, 3]
-result = list(map(lambda x, y, z: x + y + z, list1, list2, list3))
+
+
+def get_add_lists(list1, list2, list3):
+    """representing added lists"""
+    sum_lists = list(map(lambda x, y, z: x + y + z, list1, list2, list3))
+    return sum_lists
+
+
+list1 = [4, 6, 9]
+list2 = [6, 8, 5]
+list3 = [7, 2, 3]
+result = get_add_lists(list1, list2, list3)
 
 # print(result)
 
