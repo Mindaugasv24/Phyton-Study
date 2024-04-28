@@ -1,9 +1,23 @@
 class Tank:
     def __init__(self):
-        self.x = 0
-        self.y = 0
+        self.x = 3
+        self.y = 10
+        self.target_x = 0
+        self.target_y = 0
         self.direction = 'N'
         self.shots_fired = {'N': 0, 'E': 0, 'S': 0, 'W': 0}
+
+    def check_cordinates(self):
+        """representing board of cordinates"""
+        for x in range(5):
+            for y in range(20):
+                if x == self.x and y == self.y:
+                    print("^", end="")
+                elif x == self.target_x and y == self.target_y:
+                    print("0", end="")
+                else:
+                    print("_", end="")
+            print()
 
     def forward(self):
         if self.direction == 'N':
@@ -56,6 +70,7 @@ class Tank:
             print('Shots fired in', direction, 'direction:', shots)
 
 tank = Tank()
+tank.check_cordinates()
 
 while True:
     print("\n 1. forward, 2. back, 3. left, 4. right, 5. Shoot, 6. Info, 7. Exit")
