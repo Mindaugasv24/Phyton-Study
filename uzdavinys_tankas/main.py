@@ -104,7 +104,7 @@ class Tank:
 
     def rotate_tank(self, symbol):
         """representing tank rotation"""
-        print("symbol:", symbol)
+        tank.rotate_left(), tank.move_forward()
 
     def main(self):
         """representing checked values"""
@@ -124,3 +124,4 @@ class Tank:
 tank = Tank()
 tank.main()
 tank.check_cordinate()
+tank.rotate_left()
