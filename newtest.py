@@ -7,18 +7,6 @@ class Tank:
         self.direction = 'N'
         self.shots_fired = {'N': 0, 'E': 0, 'S': 0, 'W': 0}
 
-    def check_cordinates(self):
-        """representing board of cordinates"""
-        for x in range(5):
-            for y in range(20):
-                if x == self.x and y == self.y:
-                    print("^", end="")
-                elif x == self.target_x and y == self.target_y:
-                    print("0", end="")
-                else:
-                    print("_", end="")
-            print()
-
     def forward(self):
         if self.direction == 'N':
             self.y += 1
@@ -68,6 +56,19 @@ class Tank:
         print('Total Shots Fired:', sum(self.shots_fired.values()))
         for direction, shots in self.shots_fired.items():
             print('Shots fired in', direction, 'direction:', shots)
+
+    def check_cordinates(self):
+        """representing board of cordinates"""
+        for x in range(5):
+            for y in range(20):
+                if x == self.x and y == self.y:
+                    print("^", end="")
+                elif x == self.target_x and y == self.target_y:
+                    print("0", end="")
+                else:
+                    print("_", end="")
+            print()
+
 
 tank = Tank()
 tank.check_cordinates()
