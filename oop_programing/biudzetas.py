@@ -6,6 +6,7 @@ Leistų vartotojui parodyti biudžeto ataskaitą (visus pajamų ir išlaidų įr
 Leistų vartotojui išeiti iš programos"""
 
 class Irasas:
+    """r"""
     def __init__(self, tipas, suma):
         self.tipas = tipas
         self.suma = suma
@@ -15,18 +16,22 @@ class Irasas:
 
 
 class Biudzetas:
+    """r"""
     def __init__(self):
         self.zurnalas = []
 
     def prideti_pajamu_irasa(self, suma):
+        """r"""
         pajamos = Irasas("Pajamos", suma)
         self.zurnalas.append(pajamos)
 
     def prideti_islaidu_irasa(self, suma):
+        """r"""
         islaidos = Irasas("Išlaidos", suma)
         self.zurnalas.append(islaidos)
 
     def gauti_balansą(self):
+        """r"""
         suma = 0
         for irasas in self.zurnalas:
             if irasas.tipas == "Pajamos":
@@ -36,6 +41,7 @@ class Biudzetas:
         print(suma)
 
     def parodyti_ataskaita(self):
+        """r"""
         for irasas in self.zurnalas:
             print(f"{irasas.tipas}: {irasas.suma}")
 
