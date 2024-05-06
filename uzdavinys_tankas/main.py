@@ -1,5 +1,5 @@
 class Tank:
-    """representing game program name"""
+    """representing game_program name"""
 
     def __init__(
         self,
@@ -80,9 +80,17 @@ class Tank:
             self.direction = "v"
         return self.direction
 
-    # def shoot(self):
-    #     """representing shots per direction"""
-    #     self.shots_fired[self.direction] += 1
+    def shots(self):
+        """representing shots per direction"""
+        self.shots_fired[self.direction] += 1
+
+    def info(self):
+        """representing battle info"""
+        print('Direction:', self.direction)
+        print('Coordinates:', (self.cordinates_x, self.cordinates_y))
+        print('Total Shots Fired:', sum(self.shots_fired.values()))
+        for direction, shots in self.shots_fired.items():
+            print('Shots fired in', direction, 'direction:', shots)
 
     def input_value(self):
         """representing direction values"""
@@ -102,9 +110,12 @@ class Tank:
             raise ValueError("tokia raide negalima")
         return value
 
-    def rotate_tank(self, symbol):
+    def rotate_tank(self):
         """representing tank rotation"""
-        print("symbol:", symbol)
+        tank.move_forward()
+        tank.move_back()
+        tank.rotate_left(), tank.move_forward()
+        tank.rotate_rigth(), tank.move_forward()
 
     def main(self):
         """representing checked values"""
@@ -115,7 +126,17 @@ class Tank:
                 if value == "q":
                     break
                 elif value == "^":
-                    self.rotate_tank(value)
+                    self.move_forward()
+                elif value == "v":
+                    self.move_back()
+                elif value == "<":
+                    self.rotate_left(), self.move_forward()
+                elif value == ">":
+                    self.rotate_rigth(), self.move_forward()
+                elif value == "s":
+                    self.shots(), self.shots_fired
+                elif value == "i":
+                    self.info()
                 self.check_cordinate()
             except ValueError:
                 print("neteisinga reiksme")
@@ -124,3 +145,5 @@ class Tank:
 tank = Tank()
 tank.main()
 tank.check_cordinate()
+tank.rotate_left()
+tank.rotate_rigth()
