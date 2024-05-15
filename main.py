@@ -102,3 +102,11 @@ models = [
 
 for i in models:
     db.add_data_model(**i)
+
+# data = {
+#     'table': 'transmission',
+#     'column_name': 'transmission_id',
+#     'column_values': (1, 3, 5),
+# }
+
+# db.delete_row_from_table(data)

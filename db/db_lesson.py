@@ -90,3 +90,14 @@ class DB:
         sql_query = f"if exist drop_table {table}"
         self.execute_sql_query(sql_query)
         self.cursor.commit()
+
+    def delete_row_from_table(self, data: dict) -> None:
+        """representing delete data from the row in table"""
+        sql_query = f"""
+        DELETE FROM {data['table']}"
+        WHERE {data['column_name']} in {data['column_values']};
+        """
+        self.execute_sql_query(sql_query=sql_query)
+
+    def close_connection(self):
+        self.conection.close()
