@@ -1,11 +1,13 @@
-URL = 'project.db'
+URL = 'mano_duomenu_baze.db'
 
 TRANSMISSION_TABLE = """
-CREATE  TABLE IF NOT EXISTS transmision (
-transmision_id INTEGER PRIMARY KEY,
-transision char,
-transision_type char);
+CREATE TABLE IF NOT EXISTS transmission (
+transmission_id INTEGER PRIMARY KEY,
+transmission char,
+transmission_type char,
+one_more_column char DEFAULT 0);
 """
 
 TABLES = [TRANSMISSION_TABLE]
-DROP_TABLES = ['transision', 'engine', 'model_type', 'model', 'market']
+
+DROP_TABLES = ['transmission', 'engine', 'model_type', 'model', 'market']
