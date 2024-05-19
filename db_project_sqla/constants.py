@@ -1,12 +1,11 @@
-URL = 'database/project.db'
+URL = 'project.db'
 
-transmision_table = """
+TRANSMISSION_TABLE = """
 CREATE  TABLE IF NOT EXISTS transmision (
 transmision_id INTEGER PRIMARY KEY,
 transision char,
 transision_type char);
 """
 
-TABLES = [transmision_table]
-
+TABLES = [TRANSMISSION_TABLE]
 DROP_TABLES = ['transision', 'engine', 'model_type', 'model', 'market']

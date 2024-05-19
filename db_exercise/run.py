@@ -1,4 +1,4 @@
 
-from db_exercise.tables import Employee
+from db_exercise.table_data import Employee
 
 print(Employee)
