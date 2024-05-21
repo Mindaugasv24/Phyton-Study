@@ -97,11 +97,15 @@ class PandasDB:
             inplace=True,
         )
 
-    def read_from_excel_and_create_table_in_DB(self, data: dict) -> DataFrame:
+    def read_from_excel_and_create_table_in_DB(self, data: dict) -> None:
         """representing:"""
         data_frame = self.data[[data["columns"]]]
         data_frame.drop_duplicates(inplace=True)
         self.create_table_in_DB(
             data_frame, data["table_name"], f'{data["table_name"]}_id'
         )
-        table = self.read_data_from_DB(data["table_name"])
+
+       def merge_and_drop(self, data, drop_columns: dict) ->None:
+            table_data = self.read_data_from_DB(data["table_name"])
+            self.data = self.merge(table, how='inner', on=data["columns"])
+            self.data.drop(columns=data["columns"], inplace=True)
