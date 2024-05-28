@@ -30,6 +30,7 @@ class DatabaseWriter(TextProcessor):
         cursor = conn.cursor()
         cursor.execute("CREATE TABLE IF NOT EXISTS processed_text (id INTEGER PRIMARY KEY, text TEXT)")
         cursor.execute("INSERT INTO processed_text (text) VALUES (?)", (self.text,))
+        cursor.execute()
         conn.commit()
         conn.close()
 
